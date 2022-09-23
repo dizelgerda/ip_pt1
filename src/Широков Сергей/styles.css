@@ -1,0 +1,58 @@
+form {
+    display: flex;
+    justify-content: center;
+}
+
+#input, #k, #inputDec, .parDecrypt {
+    width: 40%;
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
+}
+
+#k {
+    width: 10%;
+}
+
+button, p {
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+p {
+    width: 60%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.heading {
+    font-size: 20px;
+    padding: 10px;
+    font-size: 25px;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.parDecrypt {
+    border: none;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.container {
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
