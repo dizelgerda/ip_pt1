@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9EDA8"
+    tools:context=".ui.main.MainFragment">
+
+    <Switch
+        android:id="@+id/language_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="Сменить язык алфавита на EN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/y_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:text="Использовать &quot;Й&quot;"
+        app:layout_constraintBottom_toTopOf="@+id/language_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/e_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="Использовать &quot;Ё&quot;"
+        app:layout_constraintBottom_toTopOf="@+id/y_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <EditText
+        android:id="@+id/input_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:hint="Исходная строка"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/encrypt_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/step_editText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:ems="16"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/e_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encrypt_button" />
+
+    <EditText
+        android:id="@+id/step_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:hint="Шаг"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input_editText"
+        app:layout_constraintTop_toTopOf="@+id/input_editText"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/encrypt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Зашифровать"
+        app:backgroundTint="#523f90"
+        app:layout_constraintBottom_toTopOf="@+id/e_switch"
+        app:layout_constraintEnd_toStartOf="@+id/decrypt_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/decrypt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Расшифровать"
+        app:backgroundTint="#523f90"
+        app:layout_constraintBottom_toTopOf="@+id/e_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/encrypt_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="Результат:"
+        app:layout_constraintBottom_toTopOf="@+id/result_textView"
+        app:layout_constraintStart_toStartOf="@+id/result_textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:text="Шифр Цезаря"
+        app:layout_constraintBottom_toTopOf="@+id/input_editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
