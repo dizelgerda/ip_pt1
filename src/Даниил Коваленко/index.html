@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./script.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="root">
+    <form class="form">
+      <label class="form__label-input">
+        Сообщение
+        <input type="text" name="message" placeholder="Сообщение" class="form__input from__input_type_message">
+      </label>
+      <input type="number" name="offset" placeholder="Сдвиг" class="form__input form__input_type_offset" max="31">
+
+      <div class="form__radio-container">
+        <label>
+          <input type="radio" name="mode" class="form__radio" checked value="encrypt">
+          Зашифровать
+        </label>
+        <label>
+          <input type="radio" name="mode" class="form__radio" value="decrypt">
+          Расшифровать
+        </label>
+      </div>
+      <div class="form__checkbox-container">
+        <label>
+          <input type="checkbox" name="additional_letter" class="form__checkbox" checked value="й">
+          Включить "й"
+        </label>
+        <label>
+          <input type="checkbox" name="additional_letter" class="form__checkbox" value="ё">
+          Включить "ё"
+        </label>
+      </div>
+      <p class="form__output"></p>
+    </form>
+  </div>
+
+</body>
+
+</html>
